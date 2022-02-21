@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package dummy;
+
+option java_package = "br.com.jhegnerlabs.proto.dummy";
+option java_multiple_files = true;
+//option java_outer_classname = "";
+
+message DummyMessage {}
+
+service DummyService {}
