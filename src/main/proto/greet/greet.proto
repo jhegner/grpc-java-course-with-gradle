@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dummy;
+
+option java_package = "br.com.jhegnerlabs.proto.dummy";
+option java_multiple_files = true;
+
+message Greeting {
+  string first_name = 1;
+  string last_name = 2;
+}
+
+message GreetingRequest {
+  Greeting greeting = 1;
+}
+
+message GreetingResponse {
+  string result = 1;
+}
+
+service GreetingService {
+  // unary
+  rpc Greet(GreetingRequest) returns (GreetingResponse) {};
+}
